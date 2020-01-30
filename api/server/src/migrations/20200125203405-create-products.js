@@ -20,9 +20,6 @@ module.exports = {
       price: {
         type: Sequelize.DECIMAL
       },
-      option: {
-        type: Sequelize.ABSTRACT
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

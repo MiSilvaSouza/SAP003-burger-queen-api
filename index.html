@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    fetch('http://localhost:3000/api/products')
+      .then(data => data.json())
+      .then(body => {
+        const template = body.map(item => {
+          return `<li>${item.name} - RS ${item.price},00</li>`
+        }).join('');
+        document.querySelector('body').innerHTML = template;
+      })
+  </script>  
+</body>
+</html>
