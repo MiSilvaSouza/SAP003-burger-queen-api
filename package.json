@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Nova versão projeto Burger Queen",
   "main": "index.js",
-  "scripts": {
+  "scripts": {   
     "migrate": "npx sequelize-cli db:migrate",
     "test": "export NODE_ENV=test &&  sequelize db:migrate:undo:all  && sequelize db:migrate  && nyc --require @babel/register mocha ./api/test/*-test.js --timeout 20000 --exit",
     "dev": "nodemon  --exec babel-node ./api/index.js"

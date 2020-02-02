@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <title>Burger Queen</title>
 </head>
 <body>
   <script>
@@ -12,7 +13,14 @@
       .then(data => data.json())
       .then(body => {
         const template = body.map(item => {
-          return `<li>${item.name} - RS ${item.price},00</li>`
+          return `
+          <div>
+            <section class='card hover'>
+              <p>${item.name}</p>      
+              <p>R$ ${item.price},00</p>            
+            </section>
+          <div>`
+            
         }).join('');
         document.querySelector('body').innerHTML = template;
       })
