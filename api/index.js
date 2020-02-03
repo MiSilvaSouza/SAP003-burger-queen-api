@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000
 app.use('/api/products', productRoutes)   
 
 app.get('*', (req, res) => res.status(200).send({
-   message: `Testando bq-api`
+   message: `Backend Projeto Burger Queen`
 }))
 
 app.listen(port, () => {
